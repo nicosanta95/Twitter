@@ -21,7 +21,7 @@ function controlloUsername() {
 
 function controlloPassword() {
   const regexPassword =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/; 
   password = document.getElementById("password");
   if (password.value.match(regexPassword)) {
         return true;
