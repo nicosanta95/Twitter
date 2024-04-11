@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1DA1F2;
+}
+
+.container{
+    background-color: rgb(255, 255, 255);
+    max-width: 600px;
+    /* margin: auto; */
+    border-radius: 0.5rem;
+    /* display: flex; */
+    align-items: center;
+    margin-top: 20rem;
+    padding-bottom: 2rem;
+}
+
+h1{
+    margin-left: 1.5rem;
+}
+
+#logo{
+    height: 50px;
+    width: 60px;
+
+}
+
+.primaRiga{
+    padding-top: 1rem;
+    display: flex;
+   
+}
+
+.form{
+   margin: 1.5rem;
+    padding-top: 2rem;
+}
+
+#bntRegistrati{
+    background-color: #121089;
+    color: white;
+}
+
+.classeErrori{
+    color: red;
+}
+
+.textArea{
+    width: 36rem;
+}
