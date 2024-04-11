@@ -52,7 +52,7 @@ let nicknameUtente = localStorage.getItem("nickname");
 
 class Utente {
   constructor(nome, password, tweets){
-      this.nome=nome;
+      this.nome=nome; 
       this.password=password;
       this.tweets=tweets;
 
