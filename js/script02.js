@@ -23,24 +23,27 @@ function scalaCaratteri(){
         }
     }
 
-    
+    console.log(typeof utenteLoggato);
+
 
     function aggiungiTweet(){
         let data= new Date();
         data = data.getTime();
-        let nuovoTweet = new Tweet(textArea.value, data.value); 
-          if (utenteLoggato) {
-            // Aggiungi un nuovo tweet all'array dei tweet
-            utenteLoggato.tweets.push("Nuovo tweet da aggiungere");
-        
-            // Aggiorna l'oggetto nel localStorage
-            localStorage.setItem('nome_del_tuo_oggetto', JSON.stringify(oggettoSalvato));
-        }
-        localStorage.getItem("utenteLoggato"(2)).push(nuovoTweet);
-        console.log(utenteLoggato);
+        let nuovoTweet = new Tweet(textArea.value, data); 
+           utenteLoggato.tweets.push(nuovoTweet);
+            console.log(nuovoTweet);
+            
     }
+        
+
     
     
+// function aggiungiTweet() {
+//     let data= new Date();
+//     data = data.getTime();
+//     utenteLoggato.push(arrayOgg);                                       
+// }
+   
     
 
 
@@ -67,4 +70,4 @@ function scalaCaratteri(){
 
 textArea.addEventListener("input", scalaCaratteri);
 btnTweet.addEventListener("click", aggiungiTweet);
-// document.addEventListener('DOMContentLoaded', stampaPost);
+//  document.addEventListener('DOMContentLoaded', stampaPost)
