@@ -32,6 +32,7 @@ function controlloPassword() {
   }
 }
 
+
 function registraUtente(){
     let utenteOk = controlloUsername();
     let passwordOk = controlloPassword();
@@ -59,7 +60,6 @@ class Utente {
       }
 
   }
-
   
 
 

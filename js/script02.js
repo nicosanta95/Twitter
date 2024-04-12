@@ -1,4 +1,3 @@
-
 let textArea = document.querySelector("#textArea");
 let caratteriRimanenti = document.querySelector("#conteggio")
 let erroriUtente = document.querySelector("#erroriUtente");
@@ -12,6 +11,7 @@ function scalaCaratteri(){
   }
 
   let utenteLoggato = JSON.parse(localStorage.getItem("nuovoUtente"));
+
   console.log(utenteLoggato);
 
 
@@ -23,11 +23,17 @@ function scalaCaratteri(){
         }
     }
 
+    
+
     function aggiungiTweet(){
         let data= new Date();
         data = data.getTime();
         let nuovoTweet = new Tweet(textArea.value, data.value);
-        [...utenteLoggato].push(nuovoTweet);
+        if(utenteLoggato){
+            utenteLoggato.tweets.push(nuovoTweet);
+            localStorage.setItem("utenteLoggato", utenteLoggato)
+          }
+        localStorage.getItem("utenteLoggato"(2)).push(nuovoTweet);
         console.log(utenteLoggato);
     }
     
@@ -57,5 +63,5 @@ function scalaCaratteri(){
 // }
 
 textArea.addEventListener("input", scalaCaratteri);
- btnTweet.addEventListener("click", aggiungiTweet);
+btnTweet.addEventListener("click", aggiungiTweet);
 // document.addEventListener('DOMContentLoaded', stampaPost);
