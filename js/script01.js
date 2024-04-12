@@ -29,9 +29,18 @@ function controlloPassword() {
         erroriPassword.innerHTML += "Inserire almeno 1 lettera minuscola,<br> 1 maiuscola,<br> 1 numero,<br> 1 carattere speciale <br> Minimo 8 caratteri."
        
         
-  }
-}
-
+      }
+    }
+    
+    class Utente {
+      constructor(nome, password, tweets){
+          this.nome=nome; 
+          this.password=password;
+          this.tweets=tweets;
+    
+          }
+    
+      }
 
 function registraUtente(){
     let utenteOk = controlloUsername();
@@ -51,15 +60,6 @@ let nicknameUtente = localStorage.getItem("nickname");
 
 
 
-class Utente {
-  constructor(nome, password, tweets){
-      this.nome=nome; 
-      this.password=password;
-      this.tweets=tweets;
-
-      }
-
-  }
   
 
 

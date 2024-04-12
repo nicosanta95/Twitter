@@ -23,13 +23,20 @@ function scalaCaratteri(){
         }
     }
 
+    
     console.log(typeof utenteLoggato);
-
+ 
 
     function aggiungiTweet(){
-        let data= new Date();
-        data = data.getTime();
-        let nuovoTweet = new Tweet(textArea.value, data); 
+        let data = new Date;
+    let giorno = data.getDate();
+    let mese = data.getMonth() +1;
+    let anno = data.getFullYear();
+    let orario = data.getHours();
+    let minuti = data.getMinutes();
+    let secondi = data.getSeconds();
+    let dataOraString = `${giorno}/${mese}/${anno} ${orario}:${minuti}:${secondi}`;
+        let nuovoTweet = new Tweet(textArea.value, dataOraString); 
            utenteLoggato.tweets.push(nuovoTweet);
             console.log(nuovoTweet);
             
