@@ -4,6 +4,7 @@ let erroriUtente = document.querySelector("#erroriUtente");
 let erroriPassword = document.querySelector("#erroriPassword");
 let post = document.querySelector("#post");
 let btnTweet = document.querySelector("#bntTweet");
+let btnLogout = document.querySelector("#btnLogout");
 
 function scalaCaratteri(){
     let caratteriRimanenti = textArea.maxLength - textArea.value.length;
@@ -12,7 +13,7 @@ function scalaCaratteri(){
 
   let utenteLoggato = JSON.parse(localStorage.getItem("nuovoUtente"));
 
-  console.log(utenteLoggato);
+
 
 
     class Tweet {
@@ -24,11 +25,11 @@ function scalaCaratteri(){
     }
 
     
-    console.log(typeof utenteLoggato);
+    
  
 
     function aggiungiTweet(){
-        let data = new Date;
+    let data = new Date;
     let giorno = data.getDate();
     let mese = data.getMonth() +1;
     let anno = data.getFullYear();
@@ -37,10 +38,22 @@ function scalaCaratteri(){
     let secondi = data.getSeconds();
     let dataOraString = `${giorno}/${mese}/${anno} ${orario}:${minuti}:${secondi}`;
         let nuovoTweet = new Tweet(textArea.value, dataOraString); 
+        localStorage.setItem("nuovoUtente", JSON.stringify(utenteLoggato));
            utenteLoggato.tweets.push(nuovoTweet);
-            console.log(nuovoTweet);
-            
-    }
+
+           post.innerHTML = utenteLoggato.value;
+          
+           
+        }
+        btnTweet.addEventListener("click", aggiungiTweet);
+        
+        
+        
+        
+        function logout(){
+            localStorage.clear();
+        }
+        
         
 
     
@@ -62,19 +75,8 @@ function scalaCaratteri(){
 //    event.preventDefault();
 //    post.innerHTML="";
    
-   
-//    if(tweet.trim() == ""){
-//      post.innerHTML += "Il campo è vuoto, tweet non postabile"
-//      textArea.value = "";
-//     }else{
-//       array.push(tweet);
-//       post.innerHTML += array;
-//       console.log(array);
-//       textArea.value = "";
-//       localStorage.setItem("tweet", array);
-//   }
-// }
+
 
 textArea.addEventListener("input", scalaCaratteri);
-btnTweet.addEventListener("click", aggiungiTweet);
+btnLogout.addEventListener("click", logout);
 //  document.addEventListener('DOMContentLoaded', stampaPost)

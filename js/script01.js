@@ -52,7 +52,7 @@ function registraUtente(){
               
        
     }else{
-        console.log("Errore");
+        event.preventDefault(); 
     }
 }
 
