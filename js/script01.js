@@ -52,7 +52,7 @@ function registraUtente(){
               
        
     }else{
-        event.preventDefault(); 
+        event.preventDefault();  
     }
 }
 

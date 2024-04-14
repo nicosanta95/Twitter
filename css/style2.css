@@ -47,7 +47,17 @@ h1{
     color: red;
 }
  
-.textArea{
+.textArea{ 
     width: 36rem;
 }
 
+.postClass{
+    border: #1DA1F2;
+    border-radius: 2rem;
+    border-color: #1DA1F2;
+}
+
+#bntTweet{
+    background-color: #121089;
+    color: white;
+}

@@ -22,8 +22,10 @@ function scalaCaratteri(){
             this.data=data;
 
         }
+      
     }
 
+        
     
     
  
@@ -37,14 +39,16 @@ function scalaCaratteri(){
     let minuti = data.getMinutes();
     let secondi = data.getSeconds();
     let dataOraString = `${giorno}/${mese}/${anno} ${orario}:${minuti}:${secondi}`;
-        let nuovoTweet = new Tweet(textArea.value, dataOraString); 
+    let nuovoTweet = new Tweet(textArea.value, dataOraString); 
+        utenteLoggato.tweets.push(nuovoTweet);
         localStorage.setItem("nuovoUtente", JSON.stringify(utenteLoggato));
-           utenteLoggato.tweets.push(nuovoTweet);
-
-           post.innerHTML = utenteLoggato.value;
+        post.innerHTML += `Il tweet di: <br> ${nuovoTweet.data} <br> ${nuovoTweet.contenuto} <br>`; 
+        textArea.value="";
+         
           
            
         }
+
         btnTweet.addEventListener("click", aggiungiTweet);
         
         
