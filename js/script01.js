@@ -59,8 +59,21 @@ function registraUtente(){
 let nicknameUtente = localStorage.getItem("nickname");
 
 
+//FUNZIONE X IMM. OCCHIO VISIBILITà PASSWORD
+function togglePasswordVisibility() {
+  let passwordInput = document.getElementById("password");
+  let eyeIcon = document.querySelector(".toggle-password i");
 
-  
+  if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      eyeIcon.classList.remove("fa-eye");
+      eyeIcon.classList.add("fa-eye-slash");
+  } else {
+      passwordInput.type = "password";
+      eyeIcon.classList.remove("fa-eye-slash");
+      eyeIcon.classList.add("fa-eye");
+  }
+}
 
 
 

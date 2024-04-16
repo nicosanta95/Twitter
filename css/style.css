@@ -59,4 +59,8 @@ h1{
    
 
 
-
+.toggle-password {
+    width: 20px; /* Regola la larghezza dell'immagine */
+    height: 20px; /* Regola l'altezza dell'immagine */
+    cursor: pointer;
+}

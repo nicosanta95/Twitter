@@ -1,0 +1,59 @@
+{
+  "utenti": [
+    {
+      "id": "d361",
+      "nome": "adasda",
+      "password": "pippoP1!",
+      "tweets": [
+        {
+          "contenuto": "sdfsdfs",
+          "data": "14/4/2024 15:53:33"
+        }
+      ]
+    },
+    {
+      "id": "9c4f",
+      "nome": "sdfsdfs",
+      "password": "pippoP1!",
+      "tweets": [
+        {
+          "contenuto": "sdfsdfsdfsdfs222333",
+          "data": "14/4/2024 16:1:7"
+        }
+      ]
+    },
+    {
+      "id": "a14e",
+      "nome": "mariaaaIOESCOOO",
+      "password": "pippoP1!",
+      "tweets": [
+        {
+          "contenuto": "bevo ***\nfumo *****\nfaccio rap",
+          "data": "14/4/2024 16:1:56"
+        }
+      ]
+    },
+    {
+      "id": "8076",
+      "nome": "nicoosss",
+      "password": "pippoP1!",
+      "tweets": [
+        {
+          "contenuto": "yoooooooo",
+          "data": "14/4/2024 16:3:18"
+        }
+      ]
+    },
+    {
+      "id": "ab0f",
+      "nome": "nicoosss",
+      "password": "pippoP1!",
+      "tweets": [
+        {
+          "contenuto": "ooo ma che non vai piu??",
+          "data": "16/4/2024 14:4:58"
+        }
+      ]
+    }
+  ]
+}

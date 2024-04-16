@@ -31,6 +31,7 @@ function scalaCaratteri(){
  
 
     function aggiungiTweet(){
+        let nicknameNelLocalStorage = utenteLoggato.nome;
     let data = new Date;
     let giorno = data.getDate();
     let mese = data.getMonth() +1;
@@ -42,7 +43,7 @@ function scalaCaratteri(){
     let nuovoTweet = new Tweet(textArea.value, dataOraString); 
         utenteLoggato.tweets.push(nuovoTweet);
         localStorage.setItem("nuovoUtente", JSON.stringify(utenteLoggato));
-        post.innerHTML += `Il tweet di: <br> ${nuovoTweet.data} <br> ${nuovoTweet.contenuto} <br>`; 
+        post.innerHTML += `Il tweet di: ${nicknameNelLocalStorage} <br> ${nuovoTweet.data} <br> ${nuovoTweet.contenuto} <br>`; 
         textArea.value="";
          
           
@@ -54,8 +55,32 @@ function scalaCaratteri(){
         
         
         
-        function logout(){
-            localStorage.clear();
+        function logout() {
+            let utenteJSON = JSON.stringify(utenteLoggato);
+        
+            let endPoint = "http://localhost:3000/utenti";
+            fetch(endPoint, {
+                method: 'POST',
+                // headers: {
+                //     'Content-Type': 'application/json'
+                // },
+                body: utenteJSON
+            })
+            .then(response => {
+                // if (!response.ok) {
+                //     throw new Error('Errore nella richiesta al server');
+                // }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Dati presenti nel finto database:', data);
+                localStorage.clear();
+            })
+            // .catch(error => {
+            //     console.error('Errore durante l\'invio della richiesta:', error);
+            // });
+        
+                    localStorage.clear();
         }
         
         
